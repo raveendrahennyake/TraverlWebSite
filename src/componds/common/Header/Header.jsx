@@ -1,104 +1,115 @@
-import React, { useState,useEffect } from 'react'
+import React, { useEffect, useState } from "react";
+import {
+  Container,
+  Row,
+  Navbar,
+  Offcanvas,
+  Nav,
+  NavDropdown,
+} from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import './Header.css'
-import {Container, Row,NavDropdown,Nav,Navbar,Offcanvas,NavLink } from 'react-bootstrap';
 
 const Header = () => {
-  const [open,setopens]=useState(false);
+  const [open, setOpen] = useState(false);
 
-  const togglemenu=()=>{
-    setopens(!open);
+  const toggleMenu = () => {
+    setOpen(!open);
+  };
+
+  useEffect(()=>{
+    window.addEventListener("scroll", isSticky);
+    return ()=>{
+      window.removeEventListener("scroll", isSticky)
+    }
+  })
+
+  // sticky Header 
+  const isSticky=(e)=>{
+    const header = document.querySelector('.header-section');
+    const scrollTop = window.scrollY;
+    scrollTop >= 120 ? header.classList.add('is-sticky') :
+    header.classList.remove('is-sticky')
   }
 
-  useEffect(() => {
-    window.addEventListener("scroll", isStick);
-    return () => {
-      window.removeEventListener("scroll", isStick);
-    };
-  }, []); 
-  
 
-  const isStick = (e) => {
-    const header = document.querySelector('.header-section'); 
-    if (header) {
-      const scrollTop = window.scrollY;
-      scrollTop >= 120 ? header.classList.add('is-stickey') : header.classList.remove('is-stickey');
-    }
-  };
-  
+ 
+
   return (
-    <div header className='header-section'>
-      <Container className='w-100 p-3'>
-        <Row>
-        <Navbar bexpand='lg' className=" mb-3 bg-secondary text-white ">
-          <Container fluid>
-            <Navbar.Brand className='nav-bar-a' href="#">
-              <NavLink to='./'>WeekendMarks</NavLink>
+    
+    <header className="header-section">
+      <Container>
+       
+          <Navbar expand="lg" className="p-0">
+            {/* Logo Section  */}
+            <Navbar.Brand>
+              <NavLink to="/"> Weekendmonks</NavLink>
             </Navbar.Brand>
-            <Navbar.Toggle aria-labelledby={`offcanvasNavbar-expand-lg`} />
+            {/* End Logo Section  */}
+
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-lg`}
               aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
               placement="start"
               show={open}
             >
+              {/*mobile Logo Section  */}
               <Offcanvas.Header>
-                <h1 className='log'> WeekendMarks</h1>
-                <span className='navbar-tologger ms-auto' onClick={togglemenu}>
-                  <NavLink >
-                    <li className=''><i class="bi bi-list"></i></li>
-                    </NavLink> 
-
-                </span> 
-                
+                <h1 className="logo">Weekendmonks</h1>
+                <span className="navbar-toggler ms-auto"  onClick={toggleMenu}>
+                  <NavLink ><i className="bi bi-x-lg"></i></NavLink>
+                 
+                </span>
               </Offcanvas.Header>
+              {/*end mobile Logo Section  */}
+
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  
-                  <NavLink classname='nav-link' to='/Home'>HOME</NavLink>
-                  <NavLink classname='nav-link' to='/About'>ABOUT</NavLink>
-                  <NavLink classname='nav-link' to='/Contact'>TOURS</NavLink>
+                  <NavLink className="nav-link" to="/" >
+                    Home
+                  </NavLink>
+                  <NavLink className="nav-link" to="/" >
+                    ABOUT US
+                  </NavLink>
+                  <NavLink className="nav-link" to="/" >
+                    TOURS
+                  </NavLink>
+
                   <NavDropdown
-                  
                     title="DESTINATION"
                     id={`offcanvasNavbarDropdown-expand-lg`}
-                   
                   >
-                    <NavDropdown.Item href="#action3">SPAIN TOURS</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                     ITALY TOURS
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                   FRANCE TOURS
-                    </NavDropdown.Item>
+                   
+                      
+                    <NavLink className="nav-link text-dark" to="/" >
+                    SPAIN TOURS
+                  </NavLink>
+                  
+                   
                   </NavDropdown>
-
-                  <NavLink classname='nav-link' to='/GALLERY'>GALLERY</NavLink>
-                  <NavLink classname='nav-link' to='/CONTACT'>CONTACT</NavLink>
+                  <NavLink className="nav-link" to="/" >
+                    GALLERY
+                  </NavLink>
+                  <NavLink className="nav-link" to="/" >
+                    CONTACT
+                  </NavLink>
                 </Nav>
-                 
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-            <div className='ms-md-4 ms-2 '>
-              <NavLink id='bookbutton' className="primaryBtn d-none d-sm-inline-block border border-dark" onClick={togglemenu}>
-                BookNow 
+            <div className="ms-md-4 ms-2">
+              <NavLink className="primaryBtn d-none d-sm-inline-block">
+                <button onClick={toggleMenu} type="button" class="btn btn-danger">Book Now</button>
+              
               </NavLink>
-              <li className='d-inline-block d-lg-none ms-3 toggle_btn'>
-                <i class="bi bi-list" onClick={togglemenu}></i>
-
+              <li className="d-inline-block d-lg-none ms-3 toggle_btn">
+               <NavLink ><i className={open ? "bi bi-x-lg" : "bi bi-list"}  onClick={toggleMenu}></i></NavLink> 
               </li>
-
             </div>
-
-          </Container>
-        </Navbar>
-        
-        </Row>
-
+          </Navbar>
+    
       </Container>
-      
-    </div>
-  )
-}
+    </header>
+  );
+};
 
-export default Header
+export default Header;
