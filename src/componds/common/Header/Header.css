@@ -1,0 +1,44 @@
+#bookbutton {
+    background: var( --primaryClr);
+    padding: 8px 15px;
+    font-size: var(--bodyText);
+    color: var( --white);
+    text-align: center;
+    position: relative;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+#bookbutton:hover {
+    transform: translateY(-3px);
+
+}
+.header-section {
+    position: absolute;
+    top: 0;
+    padding: 12px 0px;
+    width: 100%;
+}
+/* .nav-bar-a{
+    font-size: 22px;
+  color: var(--white);
+  line-height: 150%;
+  font-family: var(--fontFamily1);
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.header-section .Offcanvas.Body a {
+    font-size: 14px;
+    color: var(--white) !important;
+    line-height: 150%;
+    font-family: var(--fontFamily);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.header-section .Offcanvas.Body .NavDropdown title  {
+  color: var(--white) !important;
+
+}
+ */
