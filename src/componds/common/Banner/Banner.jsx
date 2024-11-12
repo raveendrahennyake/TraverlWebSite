@@ -13,11 +13,13 @@ const Banner = () => {
     <div className='Banner'>
       <section className='slider'>
         <Carousel variant="dark">
-          <Carousel.Item id='selection1'>
+          { <Carousel.Item className='slider1'>
             <img src={slider1} alt="..."></img>
             <Carousel.Caption>
             <div className="slider_des">
-                <h5 className="heading">
+              <div className="slider1-details">
+                <div className="slicer1-postions">
+                  <h5 className="heading">
                   JOURNEY TO <span>EXPLORE WORLD</span>
                 </h5>
                 <p className="sub_text">
@@ -25,17 +27,20 @@ const Banner = () => {
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s,
                 </p>
+                </div>
+                
+              </div>
+                
               </div>
             </Carousel.Caption>
-          </Carousel.Item>
+          </Carousel.Item> }
          
-         {/* <Carousel.Item id='selection2' >
+         {/* { <Carousel.Item className='selection2' >
             <img src={slider2} alt="..."></img>
             <Carousel.Caption>
             <div className="slider_des" >
-
-                <h5 className="heading" id='slider2'>
-
+              <div className="slicer-2-postions">
+                 <h5 className="heading" id='slider2'>
                   JOURNEY TO <span>EXPLORE WORLD</span>
                 </h5>
                 <p className="sub_text">
@@ -45,10 +50,11 @@ const Banner = () => {
                  
                 </p>
               </div>
+              </div>
             </Carousel.Caption>
-          </Carousel.Item> */}
+          </Carousel.Item> }
 
-          {/* <Carousel.Item id='slection3'>
+           { <Carousel.Item className='slection3'>
             <img src={slider3} alt="..."></img>
             <Carousel.Caption>
             <div className="slider_des">
@@ -62,9 +68,9 @@ const Banner = () => {
                 </p>
               </div>
             </Carousel.Caption>
-          </Carousel.Item> */}
+          </Carousel.Item> }
 
-          {/* <Carousel.Item id='slection4'>
+          { <Carousel.Item className='slection4'>
             <img src={slider4} alt="..."></img>
             <Carousel.Caption>
             <div className="slider_des">
@@ -78,7 +84,7 @@ const Banner = () => {
                 </p>
               </div>
             </Carousel.Caption>
-          </Carousel.Item> */}
+          </Carousel.Item> }  */}
 
         </Carousel>
       
