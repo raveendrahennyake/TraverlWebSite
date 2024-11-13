@@ -20,7 +20,7 @@ const Banner = () => {
               <div className="slider1-details">
                 <div className="slicer1-postions">
                   <h5 className="heading">
-                  JOURNEY TO <span>EXPLORE WORLD</span>
+                  JOURNEY TO EXPLORE WORLD
                 </h5>
                 <p className="sub_text">
                   Lorem Ipsum is simply dummy text of the printing and
