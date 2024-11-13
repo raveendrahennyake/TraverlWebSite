@@ -5,7 +5,8 @@ import Banner from '../../componds/common/Banner/Banner.jsx'
 const Home = () => {
   return (
     <div className='Home'>
-       <Banner/>
+      <Banner/>
+      
 
       
     </div>

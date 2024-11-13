@@ -19,6 +19,7 @@
   --heading: 26px;
   --fontFamily: "Lato", sans-serif;
   --fontFamily1: "Libre Baskerville", serif;
+  
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -79,4 +80,15 @@ table {
 
 .font-bold{
 	font-weight: 800 !important;
+}
+.App {
+	min-width: 420px;
+}
+.Container{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0.937rem;
+	padding-right: 0.937rem;
+	max-width: 1200px;
+	
 }

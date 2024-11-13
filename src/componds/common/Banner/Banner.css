@@ -1,0 +1,188 @@
+.slide {
+    z-index:99 ;
+    
+}
+
+.slider Carousel {
+    position: relative;
+
+}
+.slider .carousel .carousel-item .carousel-caption {
+    z-index: 9;
+    bottom: 20%;
+  }
+
+.slider .carousel .carousel-item .carousel-caption h5 {
+    font-size: 45px;
+    color: var(--white);
+    text-align: center;
+    line-height: 100%;
+    letter-spacing: 2px;
+    display: block;
+    
+
+}
+/* .slider .carousel .carousel-item .carousel-caption h5 span {
+    display: block;
+  } */
+
+  .slider .carousel .carousel-item .carousel-caption p  {
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: 2px;
+    display: block;
+    
+  }
+
+.slider .carousel .carousel-control-prev,
+.slider .carousel .carousel-control-next {
+    position: absolute;
+    top: 35%;
+    width: 50px;
+    height: 50px;
+    background: var(--primaryClr);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.slider .carousel .carousel-control-prev {
+  position: absolute;
+    left: 10%;
+
+}
+.slider .carousel .carousel-control-next {
+  position: absolute;
+    right: 10%;
+
+}
+
+.slider .carousel .carousel-control-prev:hover,
+.slider .carousel .carousel-control-next:hover {
+  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.267);
+}
+
+.slicer1-postions {
+  position: absolute;
+    top: -419px;
+}
+
+.slicer-2-postions{
+  position: absolute;
+    top: -550px;
+
+}
+.slider_des h5{
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+}
+.slider_des p {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@media only screen and (max-width:991px){
+  
+  
+  .slider .carousel .carousel-item .carousel-caption {
+    bottom: 20%;
+  }
+
+  .slider .carousel .carousel-item .carousel-caption h5 {
+    font-size: 35px;
+  }
+  .slider .carousel .carousel-item .carousel-caption .slider_des p {
+    font-size: 16px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 767px){
+  .slider .carousel .carousel-item img {
+    height: 610px;
+    object-fit: fill;
+  }
+
+  .slider .carousel .carousel-item .carousel-caption {
+    z-index: 9;
+    bottom: -24%;
+  }
+
+  .slider .carousel .carousel-control-prev,
+.slider .carousel .carousel-control-next {
+    position: absolute;
+    top: 55%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3ms;
+  background: var(--primaryClr);
+  opacity: 1;
+
+}
+
+.slider .carousel .carousel-control-prev {
+  position: absolute;
+    left: 5%;
+
+}
+.slider .carousel .carousel-control-next {
+  position: absolute;
+    right: 5%;
+
+}
+}
+
+
+@media only screen and (max-width: 420px){
+  .slider .carousel .carousel-item .carousel-caption {
+    right: 3%;
+    left: 3%;
+    bottom: 16%;
+    padding: 0 0 20px 0;
+    z-index: 9;
+  }
+
+  .slider .carousel .carousel-item .carousel-caption {
+    z-index: 9;
+    bottom: -10%;
+  }
+  .slider .carousel .carousel-control-prev {
+  position: absolute;
+    left: 0px;
+
+}
+.slider .carousel .carousel-control-next {
+  position: absolute;
+    right: 0px
+
+}
+
+.slider .carousel .carousel-item .carousel-caption .slider_des p {
+  font-size: 8px;
+}
+
+.slider .carousel .carousel-item .carousel-caption h5 {
+    font-size: 30px;
+    
+  }
+    .slider .carousel .carousel-control-prev,
+.slider .carousel .carousel-control-next {
+    position: absolute;
+    top: 45%;
+    width: 40px;
+    height: 40px;
+    background: var(--primaryClr);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+}
